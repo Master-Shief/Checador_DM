@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Checador iOS" />
+  <meta name="description" content="Checador iOS: calcula tu hora de salida con pausa de comida." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Checador iOS</title>
+</head>
+<body>
+  <main id="app">
+    <h1 class="title">Checador</h1>
+    <div class="divider divider-top" role="separator" aria-hidden="true"></div>
+
+    <!-- Sección 1: Hora de entrada -->
+    <section class="section" aria-labelledby="lblEntrada">
+      <button id="entradaDisplay" class="time-display" aria-describedby="lblEntrada">8:00 a.m.</button>
+      <input id="entradaInput" class="time-input" type="time" inputmode="numeric" step="60" value="08:00" aria-label="Editar hora de entrada" />
+      <div id="lblEntrada" class="label">Hora de entrada</div>
+    </section>
+
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <!-- Sección 2: Salida a comer -->
+    <section class="section" aria-labelledby="lblSalidaComer">
+      <button id="salidaComerDisplay" class="time-display" aria-describedby="lblSalidaComer">2:00 p.m.</button>
+      <input id="salidaComerInput" class="time-input" type="time" inputmode="numeric" step="60" value="14:00" aria-label="Editar salida a comer" />
+      <div id="lblSalidaComer" class="label">Salida a comer</div>
+    </section>
+
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <!-- Sección 3: Regreso de comer -->
+    <section class="section" aria-labelledby="lblRegresoComer">
+      <button id="regresoComerDisplay" class="time-display" aria-describedby="lblRegresoComer">3:00 p.m.</button>
+      <input id="regresoComerInput" class="time-input" type="time" inputmode="numeric" step="60" value="15:00" aria-label="Editar regreso de comer" />
+      <div id="lblRegresoComer" class="label">Regreso de comer</div>
+    </section>
+
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <!-- Sección 4: Salida y resúmenes -->
+    <section class="section" aria-labelledby="lblSalida">
+      <div id="salidaDisplay" class="time-display" role="text" aria-describedby="lblSalida">—:—</div>
+      <div id="lblSalida" class="label">Salida</div>
+
+      <div class="meta-row">
+        <span class="meta-label">Horas trabajadas:</span>
+        <span id="horasTrabajadas" class="meta-value">9:00 h</span>
+      </div>
+      <div class="meta-row">
+        <span id="lblTiempoComida" class="meta-label">Tiempo de comida:</span>
+        <span id="tiempoComida" class="meta-value">1:00 h</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Ajuste de entrada:</span>
+        <span id="ajusteEntrada" class="meta-value" aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+
+  <script defer src="app.js"></script>
+</body>
+</html>

@@ -1,1 +1,1 @@
-# Checador_DM
+Cambios v5: más espacio entre título y secciones; mismo espacio entre la primera línea y la hora de entrada que en el resto; texto de ajuste abreviado.
